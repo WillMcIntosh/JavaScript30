@@ -6,7 +6,7 @@ function playSound(e) {
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
     // console.log(key);
 
-    if(!audio) return; //stop the function from running if no audo associated
+    if(!audio) return; //stop the function from running if no audio associated
     audio.currentTime = 0; // rewind to start when pressed again 
     audio.play();
     key.classList.add('playing');
