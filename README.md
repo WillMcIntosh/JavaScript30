@@ -8,4 +8,4 @@ Using provided HTML, CSS, and sounds, followed along to create a drum kit by usi
 ### 2. JS and CSS clock
 
 Using the provided index.html file, followed along and learned some CSS tips to transition and rotate objects, including 
-`transform-origin: 100%` to move the point at which the object (in this case the clock hands) rotates about. By default this is the center (50%), and changing the value to 100% moves the origin all the way to the right. After following along with the second hand code, I paused and did the minutes and hours by myself. I also added some if statements to prevent the hands from jumping all over the place when they moved from the 12:00 position onward.
+`transform-origin: 100%` to move the point at which the object (in this case the clock hands) rotates about. By default this is the center (50%), and changing the value to 100% moves the origin all the way to the right. After following along with the second hand JavaScript code, I paused and did the minutes and hours by myself. I also added some if statements to prevent the hands from jumping all over the place when they moved from the 12:00 position onward.
