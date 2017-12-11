@@ -13,27 +13,20 @@ const inventors = [
   { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
 ];
 
+const newInventors = inventors.map(function(inventor){
+  // assign 'o' to return value of Object.assign and target each inventor
+  var o = Object.assign({},inventor);
+  o.yearsLived = o.passed - o.year;
+  return o;
+});
+
 /*
  * for (var i=0; i<inventors.length; i++){
  *     yearsLived = inventors[i].passed - inventors[i].year;
  *     inventors[i]["yearsLived"] = yearsLived;
  * }
  * 
- * console.table(inventors);
  */
-const newInventors = inventors.map(function(lived){
-  var o = Object.assign({},lived);
-  o.yearsLived = o.passed - o.year;
-  return o;
-});
-console.log(newInventors);
-
-/*
- * var copy = Array.from(Object.assign({}, inventors));
- * console.log(copy);
- * 
- * const derp = inventors.map( o => o.yearsLived = (o.passed - o.year) );
- * 
- * console.log(derp);
- */
+console.table(inventors);
+console.table(newInventors);
 
