@@ -120,14 +120,24 @@
   });
 
   console.table(oldest);
-  // TODO: add a yearsLived to the inventors object
+// TODO: add a yearsLived to the inventors object
 
-for (var i=0; i<inventors.length; i++){
-    yearsLived = inventors[i].passed - inventors[i].year;
-    inventors[i]["yearsLived"] = yearsLived;
-}
+const newInventors = inventors.map(function(inventor){
+  // assign 'o' to return value of Object.assign and target each inventor
+  var o = Object.assign({},inventor);
+  o.yearsLived = o.passed - o.year;
+  return o;
+});
 
-console.table(inventors);
+/*
+ * for (var i=0; i<inventors.length; i++){
+ *     yearsLived = inventors[i].passed - inventors[i].year;
+ *     inventors[i]["yearsLived"] = yearsLived;
+ * }
+ * 
+ */
+
+console.table(newInventors);
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
