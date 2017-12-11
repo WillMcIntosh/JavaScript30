@@ -122,6 +122,13 @@
   console.table(oldest);
   // TODO: add a yearsLived to the inventors object
 
+for (var i=0; i<inventors.length; i++){
+    yearsLived = inventors[i].passed - inventors[i].year;
+    inventors[i]["yearsLived"] = yearsLived;
+}
+
+console.table(inventors);
+
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
